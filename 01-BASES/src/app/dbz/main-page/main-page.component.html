@@ -5,33 +5,13 @@
 <div class="row">
     <div class="col">
         <h3>Personajes</h3>
-        <app-personajes [data]="personajes">
-
-        </app-personajes>
-        
-
-    </div>
+        <app-personajes [data]="personajes"></app-personajes>
+        </div>
     <div class="col">
-        <h3>Agregar <small> {{ nuevo.nombre }}</small></h3>
-        <hr>
-        <form (ngSubmit)="agregar()">
-             <input 
-                type="text"
-                placeholder="Nombre"
-                name = nombre
-                [(ngModel)] = "nuevo.nombre"
-                />
-            <input 
-                type="text" 
-                placeholder="Poder" 
-                name = poder
-                [(ngModel)] = "nuevo.poder"
-                />
-            <button type="submit">
-                Agregar
-            </button>
-
-        </form>
+        <app-agregar 
+            [personajes]="personajes"
+            [nuevo] = "nuevo">
+        </app-agregar>
         
     </div>
 
