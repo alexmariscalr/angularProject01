@@ -10,7 +10,7 @@ import { GifsService } from '../services/gifs.service';
 export class ResultadosComponent {
 
   get resultados() {
-    return this.gifsService.resultados;
+    return this.gifsService._resultados;
   }
 
   constructor( private gifsService: GifsService) { }
