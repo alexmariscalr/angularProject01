@@ -76,11 +76,11 @@ export interface Translations {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
-    public static toRESTCountriesResponse(json: string): RESTCountriesResponse[] {
+    public static toRESTCountriesResponse(json: string): any[] {
         return cast(JSON.parse(json), a(r("RESTCountriesResponse")));
     }
 
-    public static rESTCountriesResponseToJson(value: RESTCountriesResponse[]): string {
+    public static rESTCountriesResponseToJson(value: any[]): string {
         return JSON.stringify(uncast(value, a(r("RESTCountriesResponse"))), null, 2);
     }
 }
