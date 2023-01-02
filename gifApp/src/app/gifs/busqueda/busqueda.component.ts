@@ -19,8 +19,11 @@ export class BusquedaComponent implements OnInit {
 
   buscar() {
     const value = this.txtBuscar.nativeElement.value;
+    if (value.trim().length == 0) {return}
     console.log(value);
     this.gifsService.buscarGifs ( value );
+    this.txtBuscar.nativeElement.value = '';
+    
   }
 
   ngOnInit(): void {
