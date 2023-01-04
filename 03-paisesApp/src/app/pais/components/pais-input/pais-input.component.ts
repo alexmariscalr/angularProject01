@@ -21,12 +21,10 @@ export class PaisInputComponent implements OnInit {
 
   ngOnInit()  {
     this.debouncer
-    .pipe(
-      debounceTime(300)
-    )
+    .pipe(debounceTime(300))
     .subscribe( valor  => {
       this.onDebounce.emit ( valor )
-    })
+    });
   }
 
   buscar() {

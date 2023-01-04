@@ -18,3 +18,17 @@
         </button>
     </div>
 </div>
+
+<div class="row"> 
+    <div class="col">
+        <table *ngIf="(paises.length > 0)" class="table table-hover">
+            <div class="col">
+                <app-pais-tabla [data]="paises"></app-pais-tabla>
+            </div>
+        </table>
+        <tr>
+
+        </tr>
+    </div>
+
+</div>

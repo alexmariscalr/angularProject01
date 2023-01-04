@@ -11,17 +11,26 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorRegionComponent implements OnInit {
 
- regiones: string[]= ['africa', 'americas', 'asia', 'europe', 'oceania']
+ regiones: string[]= ['eu', 'efta', 'CARICOM', 'PA', 'AU', 'USAN', 'EEU', 'AL', 'ASEAN', 'CAIS', 'CEFTA', 'NAFTA', 'SAARC']
  regionActiva: string = ''
+ paises: Country[] = []
 
- constructor() {}
+
+  
+
+ constructor(private paisService : PaisService) {}
 
  activarRegion( region: string) {
+  if (region === this.regionActiva) {return}
   this.regionActiva =  region
+  this.paisService.buscarRegion(region)
+    .subscribe(paises => {
+      this.paises = paises
+    })
+
  }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 }
