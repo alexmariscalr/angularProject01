@@ -29,6 +29,11 @@ export class PorPaisComponent implements OnInit {
 
   }
 
+  sugerencias (termino: string) {
+    this.hayError = false;
+    
+  }
+
   ngOnInit(): void {
   }
 
