@@ -19,14 +19,6 @@ export class PaisInputComponent implements OnInit {
 
   termino: string = ''
 
-  buscar() {
-    this.onEnter.emit( this.termino )
-
-  }
-
-  constructor() { }
-
-  
   ngOnInit()  {
     this.debouncer
     .pipe(
@@ -35,6 +27,11 @@ export class PaisInputComponent implements OnInit {
     .subscribe( valor  => {
       this.onDebounce.emit ( valor )
     })
+  }
+
+  buscar() {
+    this.onEnter.emit( this.termino )
+
   }
 
   teclaPresionada ( ) {
