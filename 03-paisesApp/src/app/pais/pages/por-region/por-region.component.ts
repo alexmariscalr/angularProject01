@@ -5,26 +5,23 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-por-region',
   templateUrl: './por-region.component.html',
-  styles: [
+  styles: [`
+  button {margin-right : 5px}`
   ]
 })
 export class PorRegionComponent implements OnInit {
 
-  termino: string = '';
-  hayError:boolean = false;
-  paises: Country[] = []
+ regiones: string[]= ['africa', 'americas', 'asia', 'europe', 'oceania']
+ regionActiva: string = ''
 
- constructor(private paisService: PaisService) {}
+ constructor() {}
 
-  buscar( termino: string) {
-    this.hayError = false;
-    this.paisService.buscarRegion(termino)
-    .subscribe( (paises) => {
-      this.paises = paises
-    } )
-  }
-
- ngOnInit(): void {
+ activarRegion( region: string) {
+  this.regionActiva =  region
  }
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 }
