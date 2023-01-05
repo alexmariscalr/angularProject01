@@ -11,9 +11,11 @@
 <mat-divider></mat-divider>
 <br>
 
-<div [ngStyle]="{'display': 'flex', 'flex-wrap': 'wrap'}">
-    <div [ngStyle]="{'flex': '0 0 20%'}">
-        <mat-card *ngFor="let heroe of heroes" >
+<div [ngStyle]="{'display': 'flex', 'flex-wrap': 'wrap', 
+                'justify-content': 'center', 'align-items': 'center',
+                'gap': '20px'}">
+    <div [ngStyle]="{'flex': '0 0 30%'}" *ngFor="let heroe of heroes">
+        <mat-card  >
             <mat-card-header> 
                 <mat-card-title> {{heroe.superhero}}</mat-card-title>
                 <mat-card-subtitle>{{heroe.alter_ego}}</mat-card-subtitle>
