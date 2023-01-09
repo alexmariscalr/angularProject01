@@ -7,6 +7,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -21,7 +23,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }
