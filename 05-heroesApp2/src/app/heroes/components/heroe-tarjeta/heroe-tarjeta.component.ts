@@ -10,7 +10,10 @@ import { Heroe } from '../../interfaces/heroes.interface';
 export class HeroeTarjetaComponent {
 
   @Input() heroe!: Heroe;
-
+  
+  constructor() {
+    console.log(this.heroe)
+  }
   
 
 }
